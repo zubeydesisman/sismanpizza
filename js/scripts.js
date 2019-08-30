@@ -1,60 +1,53 @@
 // Business Logic for Pizza -------
-function Pizza(pizzaSize, pizzaTop,) {
+function Pizza(pizzaTop, pizzaSize,) {
   this.pizzaSize = pizzaSize,
   this.pizzaTop = pizzaTop,
-  this.pizzaPrice = 90
+  this.pizzaPrice = 0
 }
 
-
-
-
 Pizza.prototype.calculatePrice = function() {
-  if(this.pizzaSize === "6" && this.pizzaTop === "1") {
+  if(this.pizzaSize === "6" && this.pizzaTop === 1) {
     this.pizzaPrice = 4;
-  } else if(this.pizzaSize === "6" && this.pizzaTop === "2"){
+  } else if(this.pizzaSize === "6" && this.pizzaTop === 2){
     this.pizzaPrice = 6;
-  } else if(this.pizzaSize === "6" &&  this.pizzaTop === "3"){
+  } else if(this.pizzaSize === "6" &&  this.pizzaTop === 3){
     this.pizzaPrice = 8;
-  } else if(this.pizzaSize === "6" &&  this.pizzaTop === "4"){
+  } else if(this.pizzaSize === "6" &&  this.pizzaTop === 4){
     this.pizzaPrice = 10;
-  } else if(this.pizzaSize === "11" && this.pizzaTop === "1"){
+  } else if(this.pizzaSize === "11" && this.pizzaTop === 1){
     this.pizzaPrice = 6;
-  } else if(this.pizzaSize === "11" &&  this.pizzaTop === "2"){
+  } else if(this.pizzaSize === "11" &&  this.pizzaTop === 2){
     this.pizzaPrice = 8;
-  } else if(this.pizzaSize === "11" &&  this.pizzaTop === "3"){
+  } else if(this.pizzaSize === "11" &&  this.pizzaTop === 3){
     this.pizzaPrice = 10;
-  } else if(this.pizzaSize === "11" &&  this.pizzaTop === "4"){
+  }else if(this.pizzaSize === "11" &&  this.pizzaTop === 4){
     this.pizzaPrice = 12;
-  } else if(this.pizzaSize === "14" &&  this.pizzaTop === "1"){
+  } else if(this.pizzaSize === "14" &&  this.pizzaTop === 1){
     this.pizzaPrice = 8;
-  } else if(this.pizzaSize === "14" && this.pizzaTop === "2"){
+  }else if(this.pizzaSize === "14" && this.pizzaTop === 2){
     this.pizzaPrice = 10;
-  } else if(this.pizzaSize === "14" &&  this.pizzaTop === "3"){
+  } else if(this.pizzaSize === "14" &&  this.pizzaTop === 3){
     this.pizzaPrice = 12;
-  } else if(this.pizzaSize === "14" &&  this.pizzaTop === "4"){
+  } else if(this.pizzaSize === "14" &&  this.pizzaTop === 4){
     this.pizzaPrice = 14;
   }
 }
-console.log(this.pizzaPrice);
-
 //user interface logic-----
 $(document).ready(function(){
   $("form").submit(function(event){
     event.preventDefault();
-    var checkedPizzaTop = $(":checkbox:checked").length;
-    var checkedPizzaSize = parseInt($("input:radio[name=size]:checked").val());
+    //var checkedPizzaTop = $(":checkbox:checked").length;
+    var checkedPizzaTop = $("input:checkbox[name=toppings]:checked").length;
+    var  checkedPizzaSize = $("input:radio[name=size]:checked").val();
 
     console.log(checkedPizzaSize);
     console.log(checkedPizzaTop);
-    var newPizza = new Pizza(checkedPizzaTop, checkedPizzaSize, pizzaPrice);
+    var newPizza = new Pizza(checkedPizzaTop, checkedPizzaSize)
+    console.log(newPizza);
     newPizza.calculatePrice();
-    console.log(newPizza.pizzaPrice);
-
-
+    console.log("show me",newPizza.pizzaPrice);
     var finalPrice = newPizza.pizzaPrice;
     $(".finalprice").text(finalPrice);
     $("#result-price").show();
-
-
   })
 })
