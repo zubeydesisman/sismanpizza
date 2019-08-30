@@ -1,37 +1,34 @@
 function Pizza(pizzatop, pizzasize) {
   this.pizzasize = pizzasize,
-  this.pizzaprice = 5
-
+  this.pizzaprice = 0,
+ this.pizzatop = pizzatop
 }
-// Pizza.prototype.calprice = function(checkedpizzatop, checkedpizzasize) {
-//  pizzatop.forEach(function(pizzatop){
-//    this.pizzaprice = pizzatop + 2;
-// }
 
 
+   Pizza.prototype.calprice = function() {
+   if(this.pizzasize === "6" && this.pizzatop === "1") {
+    this.pizzaprice = 4;
+    }
+}
 
 
 
 $(document).ready(function(){
   $("form").submit(function(event){
     event.preventDefault();
-    var pizzatop = [];
-    var checkedpizzasize = $("input:radio[name=size]:checked").val();
+  var checkedpizzatop = $(":checkbox:checked").length;
+  var checkedpizzasize = parseInt($("input:radio[name=size]:checked").val());
     console.log(checkedpizzasize);
-    $("input:checkbox[name=toppings]:checked").each(function(){
-      var checkedpizzatop= $(this).val();
-      pizzatop.push(checkedpizzatop);
-    });
-    console.log(pizzatop);
+    console.log(checkedpizzatop);
+      var newPizza = new Pizza(checkedpizzatop, checkedpizzasize);
+      newPizza.calprice();
+      console.log(newPizza.pizzaprice);
+
+
+      var finalPrice = newPizza.pizzaprice;
+          $(".finalprice").text(finalPrice);
+          $("#result-price").show();
+
+
   })
 })
-
-
-
-
-
-
-
-//if (pizzatop[0] > 4 && questions[1] <= 2 && questions[2] > 4) {
-//})
-//})
