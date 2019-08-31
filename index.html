@@ -1,53 +1,53 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Sisman Pizza</title>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-3.4.1.js"></script>
-    <script src="js/scripts.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <div class="jumbotron">
-        <h1>Welcome to Sisman Pizza!</h1>
-        <img class="img1"src="img/Pizza3.jpg" alt="pizza" height="200" width="200">
-        <img class="img1"src="img/Pizza3.jpg" alt="pizza" height="200" width="200">
-          <img class="img1"src="img/Pizza3.jpg" alt="pizza" height="200" width="200">
-            <img class="img1"src="img/Pizza3.jpg" alt="pizza" height="200" width="200">
-              <img class="img1"src="img/Pizza3.jpg" alt="pizza" height="200" width="200">
+<head>
+  <title>Sisman Pizza</title>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.4.1.js"></script>
+  <script src="js/scripts.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Welcome to Sisman Pizza!</h1>
+      <img class="img1"src="img/Pizza3.jpg" alt="pizza" height="200" width="200">
+      <img class="img1"src="img/Pizza3.jpg" alt="pizza" height="200" width="200">
+      <img class="img1"src="img/Pizza3.jpg" alt="pizza" height="200" width="200">
+      <img class="img1"src="img/Pizza3.jpg" alt="pizza" height="200" width="200">
+      <img class="img1"src="img/Pizza3.jpg" alt="pizza" height="200" width="200">
+    </div>
+    <form>
+      <div class="form-group">
+        <p>Choose toppings that you like!</p>
+        <input type="checkbox" name="toppings" value="cheese">Cheese<br>
+        <input type="checkbox" name="toppings" value="pepperoni">Pepperoni<br>
+        <input type="checkbox" name="toppings" value="artichoke">Artichoke<br>
+        <input type="checkbox" name="toppings" value=" anchovy">Anchovy<br>
       </div>
-      <form>
-        <div class="form-group">
-          <p>Choose toppings that you like!</p>
-          <input type="checkbox" name="toppings" value="cheese">Cheese<br>
-          <input type="checkbox" name="toppings" value="pepperoni">Pepperoni<br>
-          <input type="checkbox" name="toppings" value="artichoke">Artichoke<br>
-          <input type="checkbox" name="toppings" value=" anchovy">Anchovy<br>
-        </div>
-        <p>Choose size:</p>
-        <div class="radio">
-       <label>
-         <input type="radio" name="size" value="6"">
-         6"
-       </label>
-     </div>
-     <div class="radio">
-       <label>
-         <input type="radio" name="size" value="11"">
-         11"
-       </label>
-     </div>
-     <div class="radio">
-       <label>
-         <input type="radio" name="size" value="14"">
-         14"
-       </label>
-     </div>
-     <button type="submit" Class="button">Cost</button>
-      </form>
-       <div id="price">
+      <p>Choose size:</p>
+      <div class="radio">
+        <label>
+          <input type="radio" name="size" value="6"">
+          6"
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="size" value="11"">
+          11"
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="size" value="14"">
+          14"
+        </label>
+      </div>
+      <button type="submit" Class="button">Cost</button>
+    </form>
+    <div id="price">
       <h2>$<span class= "finalprice"></span></h2>
-     </div>
+    </div>
   </body>
-</html>
+  </html>
