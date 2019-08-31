@@ -2,8 +2,9 @@
   display: none;
   font-style: oblique;
   font-size: 100px;
+  color: #fd7e14;
 }
-h2 {
+h1 {
   text-align: center;
   color: #fd7e14;
   font-style: oblique;
@@ -45,4 +46,7 @@ p {
 .radio {
   color: #fd7e14;
   font-style: oblique;
+}
+button.button {
+  float: right;
 }
