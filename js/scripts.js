@@ -20,7 +20,7 @@ Pizza.prototype.calculatePrice = function() {
 $(document).ready(function(){
   $("form").submit(function(event){
     event.preventDefault();
-    //var checkedPizzaTop = $(":checkbox:checked").length;
+    //var checkedPizzaTop = $(":checkbox:checked").length; (doing same thing as next line)
     var checkedPizzaTop = $("input:checkbox[name=toppings]:checked").length;
     var  checkedPizzaSize = $("input:radio[name=size]:checked").val();
 
