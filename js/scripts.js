@@ -48,6 +48,6 @@ $(document).ready(function(){
     console.log("show me",newPizza.pizzaPrice);
     var finalPrice = newPizza.pizzaPrice;
     $(".finalprice").text(finalPrice);
-    $("#result-price").show();
+    $("#price").show();
   })
 })

@@ -14,14 +14,13 @@
       </div>
       <form>
         <div class="form-group">
-          <p> Choose toppings that you like! </p>
-          <input type="checkbox" name="signOfStress" value="cheese">Cheese<br>
-          <input type="checkbox" name="signOfStress" value="pepperoni">Pepperoni<br>
-          <input type="checkbox" name="signOfStress" value="artichoke">Artichoke<br>
-          <input type="checkbox" name="signOfStress" value=" anchovy">Anchovy<br>
-
+          <p>Choose toppings that you like!</p>
+          <input type="checkbox" name="toppings" value="cheese">Cheese<br>
+          <input type="checkbox" name="toppings" value="pepperoni">Pepperoni<br>
+          <input type="checkbox" name="toppings" value="artichoke">Artichoke<br>
+          <input type="checkbox" name="toppings" value=" anchovy">Anchovy<br>
         </div>
-        <p> Choose size: </p>
+        <p>Choose size:</p>
         <div class="radio">
        <label>
          <input type="radio" name="size" value="6"">
@@ -40,15 +39,10 @@
          14"
        </label>
      </div>
-
-       <button type="submit" Class="btn-info">Cost:</button>
+     <button type="submit" Class="button">Cost</button>
       </form>
        <div id="price">
-      <p><span class= "finalprice">   </span></p>
-
-
-
-
-    </div>
+      <h2>$<span class= "finalprice"></span></h2>
+     </div>
   </body>
 </html>
