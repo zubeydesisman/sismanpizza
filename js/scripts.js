@@ -6,30 +6,14 @@ function Pizza(pizzaTop, pizzaSize,) {
 }
 
 Pizza.prototype.calculatePrice = function() {
-  if(this.pizzaSize === "6" && this.pizzaTop === 1) {
-    this.pizzaPrice = 4;
-  } else if(this.pizzaSize === "6" && this.pizzaTop === 2){
-    this.pizzaPrice = 6;
-  } else if(this.pizzaSize === "6" &&  this.pizzaTop === 3){
-    this.pizzaPrice = 8;
-  } else if(this.pizzaSize === "6" &&  this.pizzaTop === 4){
-    this.pizzaPrice = 10;
-  } else if(this.pizzaSize === "11" && this.pizzaTop === 1){
-    this.pizzaPrice = 6;
-  } else if(this.pizzaSize === "11" &&  this.pizzaTop === 2){
-    this.pizzaPrice = 8;
-  } else if(this.pizzaSize === "11" &&  this.pizzaTop === 3){
-    this.pizzaPrice = 10;
-  }else if(this.pizzaSize === "11" &&  this.pizzaTop === 4){
-    this.pizzaPrice = 12;
-  } else if(this.pizzaSize === "14" &&  this.pizzaTop === 1){
-    this.pizzaPrice = 8;
-  }else if(this.pizzaSize === "14" && this.pizzaTop === 2){
-    this.pizzaPrice = 10;
-  } else if(this.pizzaSize === "14" &&  this.pizzaTop === 3){
-    this.pizzaPrice = 12;
-  } else if(this.pizzaSize === "14" &&  this.pizzaTop === 4){
-    this.pizzaPrice = 14;
+  if(this.pizzaSize === "6") {
+    this.pizzaPrice = 4 +(2 * this.pizzaTop);
+  }
+  if(this.pizzaSize === "11") {
+    this.pizzaPrice = 6 + (2*this.pizzaTop);
+}
+  if(this.pizzaSize === "14") {
+    this.pizzaPrice = 8 +(2*this.pizzaTop);
   }
 }
 //user interface logic-----
